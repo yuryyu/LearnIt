@@ -6,43 +6,12 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5 import QtCore, QtGui
 #from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from player import Player
+from Player import Player
+from FileManager import Filemanager
 import time 
 from LearnIt import Ui_MainWindow
 # NOTE: USE the next in CMD for compiling the form: pyuic5 -x qtdestest.ui -o pyform.py
 
-class Filemanager():
-    def __init__(self):        
-        self.currentfolder=os.path.dirname(__file__)
-        self.listenfilepath = os.path.join(
-            self.currentfolder,
-            'resources',
-            'example.wav')
-        self.recordfilepath = os.path.join(
-            self.currentfolder,
-            'records',
-            'currentrecord.wav')                        
-        self.prompttext     =''
-        #self.file_open()
-        self.showfilestree()
-
-    def showfilestree(self):
-        self.files = os.listdir(self.currentfolder+'\\resources')
-        print(self.files)
-        self.readwavmetadata()
-
-    def file_open(self):
-        self.filename = QFileDialog.getOpenFileName(directory=self.currentfolder)
-        print(self.filename)     
-
-    def readwavmetadata(self):
-        self.prompttext     ='Show text prompt!'        
-
-    def nextfile(self):
-        print('next')        
-
-    def prevfile(self):
-        print('prev')
 
 class MainWin(QMainWindow, Ui_MainWindow):
 
