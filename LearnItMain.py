@@ -1,10 +1,10 @@
 
 import sys
 import os
-from PyQt5 import uic
+#from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5 import QtCore, QtGui
-from PyQt5.QtWidgets import *
+#from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from player import Player
 import time 
