@@ -9,7 +9,7 @@ class Player():
 
     def __init__(self):
         self.fs = 44100  # Sample rate
-        self.seconds = 3  # Duration of recording
+        self.seconds = 4  # Duration of recording
         self.AMP = 1  # Amplify data - increase Volume of sound        
 
     def record(self, recordfilepath):
